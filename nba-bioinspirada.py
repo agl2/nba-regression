@@ -156,7 +156,10 @@ def runMLP(hd_layers_p = (30, ), activation_p = 'tanh' , solver_p = 'adam', lear
     return mean
 
 def main():
-    mean = runMLP()
+    mean = 0
+    for i in range(10):
+        mean += runMLP()
+    mean = mean/10
     print "Taxa de acerto: ", mean
     #for i in range(40):
     #    neurons_1 = (i)*25
